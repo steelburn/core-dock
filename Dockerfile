@@ -1,7 +1,7 @@
 FROM alpine
 COPY run.sh .
 COPY httpd-run.sh .
-RUN apk add --no-cache git nodejs npm python make curl thttpd && \
+RUN apk add --no-cache git nodejs npm python3 make curl thttpd && \
 	npm i -g npm@latest jest-cli && \
 	git clone https://github.com/zencomputersystems/eLeaveCore.git && \
 	cd eLeaveCore && \
